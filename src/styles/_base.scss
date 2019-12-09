@@ -1,0 +1,92 @@
+@import './_mixin';
+
+* {
+    padding: 0;
+    margin: 0;
+
+    &,
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+  }
+
+body {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bg-left {
+  height: 100vh;
+  background-color: $color-pink;
+  display: flex;
+  padding: 50px 85px;
+  position: relative;
+}
+
+.bg-right {
+  height: 100vh;
+  background-color: $color-blue;
+}
+
+.bg-break {
+  background-color: $color-lightblue-1;
+}
+
+/**************
+  Header
+**************/
+.header {
+  height: 45px;
+  width: 440px;
+  background-color: $color-grey;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    color: $color-white;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: auto;
+
+    &--button {
+      @include focus-outline-none;
+
+      color: $color-white;
+      border: none;
+      background-color: transparent;
+
+      & i {
+          vertical-align: bottom;
+      }
+    }
+
+    &--date {
+      color: $color-white;
+      align-self: center;
+    }
+  }
+
+  &__collapse-btn {
+    @include focus-outline-none;
+
+    background-color: transparent;
+    border: none;
+    color: $color-white;
+
+    & i {
+        vertical-align: bottom;
+    }
+  }
+}
+
+.work {
+  color: $color-pink;
+}
+
+button {
+  cursor: pointer;
+}
