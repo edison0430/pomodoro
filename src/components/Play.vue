@@ -53,11 +53,10 @@ export default {
     methods: {
         play() {
             if (this.isPlaying) {
-                this.$store.dispatch('pause');
+                this.$store.commit('pause');
             } else {
                 this.$store.dispatch('start');
             }
-            
         },
         reset() {
             if (this.isPlaying) {

@@ -49,6 +49,12 @@ export const store = new Vuex.Store({
         mode: 'work',
         workRingtone: 'default',
         breakRingtone: 'beep',
+        ringtoneLocation: {
+            default: 'https://firebasestorage.googleapis.com/v0/b/pomodoro-audio-4addb.appspot.com/o/default.mp3?alt=media&token=af9eb33b-be6d-4a17-9d5c-bec573b3022e',
+            beep: 'https://firebasestorage.googleapis.com/v0/b/pomodoro-audio-4addb.appspot.com/o/beep.mp3?alt=media&token=3590252b-59fa-4c27-b739-a28a5bddbf2c',
+            victory: 'https://firebasestorage.googleapis.com/v0/b/pomodoro-audio-4addb.appspot.com/o/victory.mp3?alt=media&token=17c9a7e7-aef4-4fe4-9fbc-d044aeb2495f',
+            jojo: 'https://firebasestorage.googleapis.com/v0/b/pomodoro-audio-4addb.appspot.com/o/jojo.mp3?alt=media&token=bbdb1b9f-5a3c-4f6b-954b-fb93728d651a',
+        },
         debugMode: false,
     },
     getters: {
@@ -88,12 +94,6 @@ export const store = new Vuex.Store({
             }, 1000)
 
             commit('start');
-        },
-        pause: ({ commit }) => {
-            commit('pause');
-        },
-        stop: ({ commit }) => {
-            commit('stop');
         }
     },
     mutations: {
@@ -105,7 +105,6 @@ export const store = new Vuex.Store({
             }
         },
         deleteTodo (state, payload) {
-            // console.log(payload);
             let index = state.todos.findIndex(element => element.id == payload);
             state.todos[index].done = true;
             

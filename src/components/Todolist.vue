@@ -80,16 +80,19 @@ export default {
         countdown(value) {
             if (value === '00:00') {
                 let src = null;
+                let ringtoneLocation = this.$store.state.ringtoneLocation;
+                let ringtone;
                 if (this.mode === 'work') {
-                    src = `/${this.$store.state.workRingtone}.mp3`;
+                    ringtone = this.$store.state.workRingtone;
                     this.$store.commit('addDoneRecord');
                 } else {
-                    src = `/${this.$store.state.breakRingtone}.mp3`;
+                    ringtone = this.$store.state.breakRingtone;
                 }
+                src = ringtoneLocation[ringtone];
                 this.$refs.audio.src = src;
                 this.playAudio();
 
-                this.$store.dispatch('stop');
+                this.$store.commit('stop');
             }
         }
     }
