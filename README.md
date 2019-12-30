@@ -1,29 +1,9 @@
 # f2e-w1-pomodoro
 
-## Project setup
-```
-npm install
-```
+[DEMO](https://edison0430.github.io/pomodoro)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+此份專案是參加六角學院第二屆精神時光物的作品
 
-### Compiles and minifies for production
-```
-npm run build
-```
+設計稿作者：吳俊儀
 
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[設計稿連結](https://xd.adobe.com/spec/4f6eb081-4411-4b48-69ae-34b92df3f3e4-395f/grid)
