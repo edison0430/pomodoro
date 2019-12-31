@@ -211,7 +211,7 @@ export default {
     }
 
     .message {
-        position: absolute;
+        position: fixed;
         top: 45%;
         left: 40%;
         font-size: 60px;
